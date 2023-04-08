@@ -1,4 +1,4 @@
-name: Linux Container Node Workflow
+name: Linux Container .net core Workflow
 
 on: [push]
 

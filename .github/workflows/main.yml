@@ -17,7 +17,7 @@ jobs:
 
     - run: |
         docker build . -t webappcontainerimages.azurecr.io/webapp-containerimage:${{ github.sha }}
-        docker push mycontainer.azurecr.io/webapp-containerimage:${{ github.sha }}     
+        docker push webappcontainerimages.azurecr.io/webapp-containerimage:${{ github.sha }}     
 
     - uses: azure/webapps-deploy@v2
       with:

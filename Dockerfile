@@ -1,8 +1,8 @@
-FROM mcr.microsoft.com/dotnet/aspnet:3.1 AS base
+FROM mcr.microsoft.com/dotnet/aspnet:7.0 AS base
 WORKDIR /app
 EXPOSE 80
 
-FROM mcr.microsoft.com/dotnet/sdk:3.1 AS build
+FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /src
 COPY ["ci-cd-via-githubworkflow.csproj","ci-cd-via-githubworkflow.csproj"]
 RUN dotnet restore "ci-cd-via-githubworkflow.csproj"

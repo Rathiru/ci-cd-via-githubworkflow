@@ -4,7 +4,7 @@ EXPOSE 80
 
 FROM mcr.microsoft.com/dotnet/sdk:3.1 AS build
 WORKDIR /src
-COPY ["ci-cd-via-githubworkflow.csproj", "/"]
+COPY ["ci-cd-via-githubworkflow.csproj","ci-cd-via-githubworkflow.csproj"]
 RUN dotnet restore "ci-cd-via-githubworkflow.csproj"
 COPY . .
 WORKDIR "/src"
